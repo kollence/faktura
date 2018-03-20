@@ -48,10 +48,10 @@ trait HasManyRelation {
                         $found->fill($item);
                         $found->save();
                         $updatedIds[] = $localId;
-                    } else {
-                        $newItems[] = $model->fill($item);
                     }
-                }
+                } else {
+                    $newItems[] = $model->fill($item);
+                       }
             }
 
             // 2. delete non-updated items
